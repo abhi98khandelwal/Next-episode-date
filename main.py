@@ -1,7 +1,9 @@
 from get_message import GetMessage
 from send_email import SendEmail
 from database import Database
+
 if __name__ == '__main__':
+    # Define variables to connect to MySQL database
     user = 'root'
     password = ''
     db = 'innovacer'
@@ -11,15 +13,20 @@ if __name__ == '__main__':
         email=input("Email address")
         series = input("TV Series").split(',')
         message = "\n"
+
+        #Create an object for Database class
         d = Database(user,password,db)
+        #Connect to database and insert the data in the table.
         d.write(email,series)
         for i in series:
-            a = GetMessage(i)
-            print(a.get_imdb_url())
+            #Create an object for GetMessage class which can determine the next episode date of the TV Series.
+            m = GetMessage(i)
+            #print(a.get_imdb_url())
             message+="Tv series name: "+i+"\n"
-            message+="Status: "+a.get_episode_date()+"\n"
-            print(message)
+            message+="Status: "+m.get_episode_date()+"\n"
+            #print(message)
             message+="\n"
 
-        a = SendEmail(email,message)
-        a.send()
+        #Send the result to user's email
+        e = SendEmail(email,message)
+        e.send()

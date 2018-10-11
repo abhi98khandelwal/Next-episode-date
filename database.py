@@ -1,6 +1,9 @@
 import pymysql
 
 class Database:
+    """
+    This class writes the 
+    """
     def __init__(self,user,password,db):
         self.user = user
         self.password = password
@@ -8,6 +11,7 @@ class Database:
         self.connection = None
 
     def connect(self):
+        #Method to connect to Database.
         self.connection = pymysql.connect(host='localhost',
                                  user=self.user,
                                  password=self.password,
@@ -16,6 +20,7 @@ class Database:
                                  cursorclass=pymysql.cursors.DictCursor)
 
     def write(self,email,series):
+        #Method to write the data to MySQL database connected
         self.connect()
         try:
             with self.connection.cursor() as cursor:
@@ -31,6 +36,7 @@ class Database:
             self.connection.close()
 
     def read(self,email):
+        #Method to read the data from the MySQL database connected
         self.connect()
         try:
             with self.connection.cursor() as cursor:
