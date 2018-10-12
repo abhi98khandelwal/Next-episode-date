@@ -13,23 +13,27 @@ class Database:
     Args:
         user (str): Username of MySQL server.
         password (str): Password of MySQL server.
-        db (str): Database name.
 
     """
     def __init__(self,user,password,db):
         self.user = user
         self.password = password
-        self.db = db
         self.connection = None
+        self.connect()
 
     def connect(self):
-        #Method to connect to Database.
+        #Method to connect to MySQL server.
         self.connection = pymysql.connect(host='localhost',
                                  user=self.user,
                                  password=self.password,
-                                 db=self.db,
                                  charset='utf8mb4',
                                  cursorclass=pymysql.cursors.DictCursor)
+        self.create_db()
+
+    def create_db(self):
+        #Method to create database and table
+        self.connection.cursor().execute('CREATE database innovacer')
+        self.connection.cursor().execute('CREATE table Entries (email VARCHAR(255) NOT NULL, series VARCHAR(255) NOT NULL);')
 
     def write(self,email,series):
         """
@@ -39,7 +43,6 @@ class Database:
             email (str): email address of user.
             series (list): list of tv series queried by user.
         """
-        self.connect()
         try:
             with self.connection.cursor() as cursor:
                 # Create a new record
@@ -60,7 +63,6 @@ class Database:
         Args:
             email (str): email id of the user
         """
-        self.connect()
         try:
             with self.connection.cursor() as cursor:
                 # Read all the records of an email address.
