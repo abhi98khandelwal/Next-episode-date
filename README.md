@@ -21,7 +21,7 @@ $ mysql
 mysql> CREATE database innovacer;
 ```
 
-3. Create a table in innovacer database.Here we create a table name Entries.
+3. Create a table in innovacer database.Here we create a table named Entries.
 ```
 mysql> use innovacer 
 mysql> CREATE table Entries (email VARCHAR(255) NOT NULL, series VARCHAR(255) NOT NULL);
