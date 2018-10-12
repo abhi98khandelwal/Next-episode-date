@@ -54,15 +54,15 @@ class GetMessage:
             if date == None:
                 return "Air date of next episode unkown"
             elif type(date)==int:
-                return "The next season episode is scheduled in year " + str(date)
+                return "Next season begins in " + str(date)
             else:
-                return "The next season episode is scheduled on" + str(date.year) + "/" +str(date.month) +  "/" + str(date.day)
+                return "Next season episode airs on " + str(date.year) + "-" +str(date.month) +  "-" + str(date.day)
 
         elif date.day == 0:
-            return "The next episode is scheduled in year " + str(date.year) + ", exact date not known"
+            return "Next episode airs in " + str(date.year) + ", exact date not known"
 
         else:
-            return "The next episode is scheduled " + str(date.year) + "/" +str(date.month) +  "/" + str(date.day)
+            return "Next episode airs on " + str(date.year) + "-" +str(date.month) +  "-" + str(date.day)
 
     def get_next_season_date(self, season):
         """

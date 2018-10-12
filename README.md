@@ -42,9 +42,9 @@ You can use the virtual environment in the repository. </br>
 
 ## Working Proof
 
-Number of queries1 </br>
-Email addressabhishekk16101@iiitnr.edu.in </br>
-TV SeriesFlash, Bodyguard, Game of Thrones, House of Cards  
+Number of queries 1 </br>
+Email address abhishekk16101@iiitnr.edu.in </br>
+TV Series Flash, House of Cards, Game of Thrones
 
 ![Working Proof](WorkingProof.png)
 
