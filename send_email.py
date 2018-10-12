@@ -11,9 +11,9 @@ class SendEmail:
 
 
     #username : senders gmail username
-    username = 'abhi98khandelwal'
+    username = 'senders gmail username'
     #password : senders gmail password
-    password = 'mniak19!!!998'
+    password = 'senders gmail password'
     def __init__(self,email,message):
         self.email = email
         self.message = 'Subject: {}\n\n{}'.format("Tv Series next episode dates", message)
@@ -23,7 +23,7 @@ class SendEmail:
         server = smtplib.SMTP_SSL('smtp.gmail.com',465)
         server.login(self.username,self.password)
         server.sendmail(
-            "abhi98khandelwal@gmail.com",
+            self.username,
             self.email,
             self.message
         )
