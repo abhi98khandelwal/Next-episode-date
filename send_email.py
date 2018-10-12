@@ -16,7 +16,7 @@ class SendEmail:
     password = 'mniak19!!!998'
     def __init__(self,email,message):
         self.email = email
-        self.message = message
+        self.message = 'Subject: {}\n\n{}'.format("Tv Series next episode dates", message)
 
     def send(self):
         #Method sends the mail via smtp lib
@@ -29,7 +29,7 @@ class SendEmail:
         )
         server.quit()
 if __name__=='__main__':
-    email = input("Email Id")
-    message = input("Message")
+    email = input("Email Id: ")
+    message = input("Message: ")
     a = SendEmail(email,message)
     a.send()
