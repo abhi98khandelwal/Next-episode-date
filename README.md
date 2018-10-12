@@ -33,8 +33,8 @@ In `send_email.py` file set `username` to your gmail userid and set `password` t
 
 ## Installing dependencies on external python libraries
 `$ pip install -r requirements.txt`
-OR
-You can use the virtual environment in the repository.
+</br> OR </br>
+You can use the virtual environment in the repository. </br>
 `$ source innovacer/bin/activate`
 
 ## Usage
@@ -42,8 +42,8 @@ You can use the virtual environment in the repository.
 
 ## Working Proof
 
-Number of queries1
-Email addressabhishekk16101@iiitnr.edu.in
+Number of queries1 </br>
+Email addressabhishekk16101@iiitnr.edu.in </br>
 TV SeriesFlash, Bodyguard, Game of Thrones, House of Cards  
 
 ![Working Proof](WorkingProof.png)
