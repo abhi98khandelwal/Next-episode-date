@@ -44,7 +44,7 @@ You can use the virtual environment in the repository. </br>
 
 Number of queries 1 </br>
 Email address abhishekk16101@iiitnr.edu.in </br>
-TV Series Flash, House of Cards, Game of Thrones
+TV Series Flash, Game of Thrones, House of Cards 
 
 ![Working Proof](WorkingProof.png)
 
