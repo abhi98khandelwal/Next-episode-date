@@ -14,7 +14,7 @@ $ sudo apt-get update
 $ sudo apt-get install mysql-server
 $ mysql_secure_installation
 ```
-2. Change the user, password and db variables in `main.py` file according to the above configured MySQL.
+2. Change the user and password variables in `main.py` file according to the above configured MySQL.
 
 ## Setting up email
 In `send_email.py` file set `username` to your gmail userid and set `password` to your gmail password.
