@@ -21,7 +21,7 @@ In `send_email.py` file set `username` to your gmail userid and set `password` t
 
 ## Installing dependencies on external python libraries
 `$ pip install -r requirements.txt`
-</br> OR </br>
+</br> or </br>
 You can use the virtual environment in the repository. </br>
 `$ source innovacer/bin/activate`
 
