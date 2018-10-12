@@ -1,4 +1,4 @@
-# Next Episode Time ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+# Next Episode Time
 
 A script designed to get an email about the next episode time of the given Tv series. The input gets stored in the MySQL database.
 
@@ -28,10 +28,10 @@ mysql> CREATE table Entries (email VARCHAR(255) NOT NULL, series VARCHAR(255) NO
 ```
 4. Change the user, password and db variables in `main.py` file according to the above configured MySQL.
 
-##Setting up email
+## Setting up email
 In `send_email.py` file set `username` to your gmail userid and set `password` to your gmail password.
 
-##Installing dependencies on external python libraries
+## Installing dependencies on external python libraries
 `$ pip install -r requirements.txt`
 
 ## Usage
