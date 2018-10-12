@@ -17,7 +17,7 @@ $ mysql_secure_installation
 2. Change the user and password variables in `main.py` file according to the above configured MySQL.
 
 ## Setting up email
-Gmail by default tries to make your email secure by preventing this type of third-party access. You can manage your gmail security settings by going to this link and allowing less secure apps. It’s turned off by default so you have to turn it on. </br>
+Gmail by default tries to make your email secure by preventing this type of third-party access. You can manage your gmail security settings by going to [this link](https://myaccount.google.com/lesssecureapps) and allowing less secure apps. It’s turned off by default so you have to turn it on. </br>
 
 In `send_email.py` file set `username` to your gmail userid and set `password` to your gmail password.
 
