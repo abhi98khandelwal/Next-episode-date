@@ -2,7 +2,19 @@ import pymysql
 
 class Database:
     """
-    This class writes the 
+    A class to write data to the SQL table.
+
+    Table Name : 'Entries'
+    Table Structure :
+        +-------+------- +
+        | email | series |
+        +-------+--------+
+
+    Args:
+        user (str): Username of MySQL server.
+        password (str): Password of MySQL server.
+        db (str): Database name.
+
     """
     def __init__(self,user,password,db):
         self.user = user
@@ -20,7 +32,13 @@ class Database:
                                  cursorclass=pymysql.cursors.DictCursor)
 
     def write(self,email,series):
-        #Method to write the data to MySQL database connected
+        """
+        Method to write the data to MySQL database connected.
+
+        Args:
+            email (str): email address of user.
+            series (list): list of tv series queried by user.
+        """
         self.connect()
         try:
             with self.connection.cursor() as cursor:
@@ -36,7 +54,12 @@ class Database:
             self.connection.close()
 
     def read(self,email):
-        #Method to read the data from the MySQL database connected
+        """
+        Method to read the data from the table in MySQL database.
+
+        Args:
+            email (str): email id of the user
+        """
         self.connect()
         try:
             with self.connection.cursor() as cursor:
