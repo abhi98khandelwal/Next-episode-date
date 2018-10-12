@@ -40,5 +40,15 @@ You can use the virtual environment in the repository.
 ## Usage
 `$ python main.py`
 
+## Working Proof
+
+Number of queries1
+Email addressabhishekk16101@iiitnr.edu.in
+TV SeriesFlash, Bodyguard, Game of Thrones, House of Cards  
+
+![Working Proof](WorkingProof.png)
+
+
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
