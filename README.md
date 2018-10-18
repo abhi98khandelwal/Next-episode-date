@@ -25,7 +25,7 @@ In `send_email.py` file set `username` to your gmail userid and set `password` t
 `$ pip install -r requirements.txt`
 </br> or </br>
 You can use the virtual environment in the repository. </br>
-`$ source innovacer/bin/activate`
+`$ source innovaccer/bin/activate`
 
 ## Usage
 `$ python main.py`
